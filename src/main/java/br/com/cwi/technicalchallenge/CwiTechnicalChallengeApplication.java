@@ -9,5 +9,4 @@ public class CwiTechnicalChallengeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CwiTechnicalChallengeApplication.class, args);
 	}
-
 }
