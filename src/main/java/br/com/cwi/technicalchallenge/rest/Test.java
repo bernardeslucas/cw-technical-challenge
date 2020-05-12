@@ -14,7 +14,4 @@ public class Test {
     private String teste(){
         return "Gustavo help me";
     }
-
-
-
 }
