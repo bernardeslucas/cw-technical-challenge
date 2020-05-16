@@ -1,1 +1,4 @@
+br\com\cwi\technicalchallenge\domain\Pauta.class
+br\com\cwi\technicalchallenge\domain\SessaoVotacao.class
 br\com\cwi\technicalchallenge\CwiTechnicalChallengeApplication.class
+br\com\cwi\technicalchallenge\rest\Test.class
