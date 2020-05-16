@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="pautas")
+@Table(name="pauta")
 public class Pauta {
 
     @Id
@@ -13,9 +13,21 @@ public class Pauta {
     private String description;
     private String title;
 
+
     public Pauta(String description, String title) {
         this.description = description;
         this.title = title;
+    }
+
+    public Pauta() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDescription() {
@@ -33,4 +45,6 @@ public class Pauta {
     public void setTitle(String title) {
         this.title = title;
     }
+
+
 }
