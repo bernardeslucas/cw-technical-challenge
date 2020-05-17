@@ -5,12 +5,11 @@ import lombok.ToString;
 
 @Data
 @ToString
-public class PautaResponse {
+public class TopicResponse {
 
     private String id;
     private String title;
     private String description;
-    private boolean isClosed;
     private String result;
 
 }

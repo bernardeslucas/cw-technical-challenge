@@ -1,7 +1,5 @@
 package br.com.cwi.technicalchallenge.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,11 +18,9 @@ public class VotingSession {
     @Column(name = "end_date")
     private LocalDateTime endDate;
 
-    private Long duration;
-
     @OneToOne
-    @JoinColumn(name = "pauta_id")
-    private Pauta pauta;
+    @JoinColumn(name = "topic_id")
+    private Topic topic;
 
     @OneToMany(mappedBy = "votingSession")
     @Column(name = "vote_id")
@@ -33,11 +29,15 @@ public class VotingSession {
     public VotingSession() {
     }
 
-    public VotingSession(LocalDateTime startDate, Long duration, LocalDateTime endDate, Pauta pauta) {
+    public VotingSession(LocalDateTime startDate, LocalDateTime endDate, Topic topic, List<Vote> votes) {
         this.startDate = startDate;
-        this.duration = duration;
         this.endDate = endDate;
-        this.pauta = pauta;
+        this.topic = topic;
+        this.votes = votes;
+    }
+
+    public boolean isClosed() {
+        return this.getEndDate() == null || LocalDateTime.now().isAfter(this.getEndDate());
     }
 
     public LocalDateTime getStartDate() {
@@ -56,15 +56,14 @@ public class VotingSession {
         this.endDate = endDate;
     }
 
-    public Pauta getPauta() {
-        return pauta;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setPauta(Pauta pauta) {
-        this.pauta = pauta;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
-    @JsonIgnore
     public List<Vote> getVotes() {
         return votes;
     }
@@ -73,16 +72,12 @@ public class VotingSession {
         this.votes = votes;
     }
 
-    public void addVote(Vote vote){
+    public void addVote(Vote vote) {
         votes.add(vote);
     }
 
-    public Long getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Long duration) {
-        this.duration = duration;
+    public Long getId() {
+        return id;
     }
 
     @Override
@@ -90,9 +85,8 @@ public class VotingSession {
         return "VotingSession{" +
                 "id=" + id +
                 ", startDate=" + startDate +
-                ", duration=" + duration +
                 ", endDate=" + endDate +
-                ", pauta=" + pauta +
+                ", topic=" + topic +
                 ", votes=" + votes +
                 '}';
     }

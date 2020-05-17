@@ -19,11 +19,11 @@ public class Vote {
     @Column(name = "date")
     private LocalDateTime voteDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "associate_id")
     private Associate associate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn (name = "voting_session_id")
     private VotingSession votingSession;
 
@@ -70,7 +70,6 @@ public class Vote {
         this.associate = associate;
     }
 
-    @JsonIgnore
     public VotingSession getVotingSession() {
         return votingSession;
     }

@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="pauta")
-public class Pauta {
+@Table(name="topic")
+public class Topic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,12 +14,12 @@ public class Pauta {
     private String title;
 
 
-    public Pauta(String description, String title) {
+    public Topic(String description, String title) {
         this.description = description;
         this.title = title;
     }
 
-    public Pauta() {
+    public Topic() {
     }
 
     public Long getId() {
