@@ -1,5 +1,6 @@
 package br.com.cwi.technicalchallenge.service;
 
+import br.com.cwi.technicalchallenge.controller.request.TopicRequest;
 import br.com.cwi.technicalchallenge.controller.request.VoteRequest;
 import br.com.cwi.technicalchallenge.controller.request.VotingSessionRequest;
 import br.com.cwi.technicalchallenge.controller.response.TopicResponse;
@@ -49,12 +50,13 @@ public class TopicService {
                 !topic.getTitle().isEmpty();
     }
 
-    public void create(Topic topic) {
+    public void create(TopicRequest topicRequest) {
+
+        Topic topic = objectMapper.convertValue(topicRequest, Topic.class);
+
         if (isTopicRequestValid(topic)) {
 
             topicRepository.save(topic);
-
-            log.debug("Topic successfully created, idTopic: " + topic.getId());
 
         } else {
             throw new ResponseStatusException(TopicExceptionEnum.TOPIC_REQUEST_INVALID.getHttpStatus(),
@@ -101,7 +103,7 @@ public class TopicService {
 
     //voting session
     private boolean isVotingSessionRequestValid(VotingSessionRequest votingSessionRequest) {
-        return votingSessionRequest.getDuration() > 0;
+        return votingSessionRequest.getDurationMinutes() > 0;
     }
 
     public void start(long idTopic, VotingSessionRequest votingSessionRequest) {
@@ -124,14 +126,12 @@ public class TopicService {
             votingSession.setTopic(topic);
 
             //setting voting session's duration
-            if (votingSessionRequest.getDuration() == null) {
+            if (votingSessionRequest.getDurationMinutes() == null) {
                 votingSession.setEndDate(LocalDateTime.now().plusMinutes(1));
             } else {
-                votingSession.setEndDate(LocalDateTime.now().plusMinutes(votingSessionRequest.getDuration()));
+                votingSession.setEndDate(LocalDateTime.now().plusMinutes(votingSessionRequest.getDurationMinutes()));
             }
-
             votingSessionRepository.save(votingSession);
-            log.debug("Voting Session id: '" + votingSession.getId() + "' successfully started in topic id: '" + topic.getId() + "'");
         } else {
             throw new ResponseStatusException(VotingSessionExceptionEnum.VOTING_SESSION_REQUEST_INVALID.getHttpStatus(),
                     VotingSessionExceptionEnum.VOTING_SESSION_REQUEST_INVALID.getMessage());
@@ -188,7 +188,6 @@ public class TopicService {
 
             votingSessionRepository.save(votingSession);
             voteRepository.save(vote);
-            log.debug("Vote succesfully registered, idVote: " + vote.getId());
         } else {
             throw new ResponseStatusException(VoteExceptionEnum.VOTE_REQUEST_INVALID.getHttpStatus(),
                     VoteExceptionEnum.VOTE_REQUEST_INVALID.getMessage());
@@ -207,7 +206,7 @@ public class TopicService {
 
         long countNoVotes = votingSession.getVotes().size() - countYesVotes;
 
-        return "%s votation -> YES votes: " + countYesVotes + ", NO votes: " + countNoVotes;
+        return "%s votation -> YES votes: [" + countYesVotes + "], NO votes: [" + countNoVotes + "].";
     }
 
 }
