@@ -16,6 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
@@ -138,7 +139,24 @@ public class TopicService {
         }
     }
 
-    //vote
+    //vote and rules
+    private void checkCpfStatus(String cpf) {
+
+        String uri = "https://user-info.herokuapp.com/users/" + cpf;
+
+        RestTemplate restTemplate = new RestTemplate();
+        String result = restTemplate.getForObject(uri, String.class);
+
+        if (result.isEmpty()) {
+            throw new ResponseStatusException(VoteExceptionEnum.CPF_INVALID.getHttpStatus(),
+                    VoteExceptionEnum.CPF_INVALID.getMessage());
+        } else if (result.contains("UNABLE")) {
+            throw new ResponseStatusException(VoteExceptionEnum.CPF_UNABLE_TO_VOTE.getHttpStatus(),
+                    VoteExceptionEnum.CPF_UNABLE_TO_VOTE.getMessage());
+        }
+
+    }
+
     private boolean isVoteRequestValid(VoteRequest voteRequest) {
         return voteRequest.getIdAssociate() >= 1 &&
 
@@ -170,12 +188,13 @@ public class TopicService {
                 throw new ResponseStatusException(VoteExceptionEnum.ASSOCIATE_NOT_FOUND.getHttpStatus(),
                         VoteExceptionEnum.ASSOCIATE_NOT_FOUND.getMessage());
             }
-            //implement CPF check
 
             if (alreadyVoted(associate, votingSession)) {
                 throw new ResponseStatusException(VoteExceptionEnum.ALREADY_VOTED.getHttpStatus(),
                         VoteExceptionEnum.ALREADY_VOTED.getMessage());
             }
+
+            checkCpfStatus(associate.getCpf());
 
             Vote vote = new Vote();
 
@@ -208,5 +227,8 @@ public class TopicService {
 
         return "%s votation -> YES votes: [" + countYesVotes + "], NO votes: [" + countNoVotes + "].";
     }
+
+
+
 
 }
