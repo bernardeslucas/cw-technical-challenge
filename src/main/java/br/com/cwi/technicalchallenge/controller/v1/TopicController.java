@@ -35,6 +35,7 @@ public class TopicController {
     @ApiOperation(value = "Gets all topics", response = TopicResponse[].class, produces = "application/json")
     @GetMapping
     public ResponseEntity<List<TopicResponse>> findAllTopics() {
+
         log.info("Searching all topics...");
         return ResponseEntity.ok(topicService.findAll());
     }

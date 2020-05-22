@@ -11,7 +11,7 @@ Para maiores informações sobre o programa, acesse [cwi.com.br](https://cwi.com
 >- Contabilizar os votos e dar o resultado da votação na pauta.
  
 ## Execução do projeto 
-A última versão commitada encontra-se hospeada no heroku, [aqui](https://cwi-pauta.herokuapp.com/swagger-ui.html). Ao entrar no site, caso a aplicação esteja dormindo (30 minutos de inatividade), irá demorar um pouquinho para acordar, após isso, os testes podem ser feitos pelo Swagger UI.
+A última versão commitada encontra-se hospeada no heroku, [aqui](https://cwi-pauta.herokuapp.com/swagger-ui.html). Ao entrar no site, caso a aplicação esteja dormindo (30 minutos de inatividade), irá demorar um pouquinho para acordar, após isso, os testes podem ser feitos pelo Swagger UI. Há 5 associados "votantes" já persistidos no banco de id 1 a 5 para fins de teste.
 
 A aplicação também pode ser testada localmente (localmente a aplicação se conecta ao mesmo banco de dados e no mesmo server do RabbitMQ da versão hospedada no heroku) diretamente pelo .jar:
 
