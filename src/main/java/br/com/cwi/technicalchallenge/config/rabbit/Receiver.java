@@ -13,7 +13,7 @@ public class Receiver {
 
     private CountDownLatch latch = new CountDownLatch(1);
 
-    @RabbitListener(queues = RabbitConfig.queueName)
+    @RabbitListener(queues = RabbitConfig.QUEUE_NAME)
     public void receiveMessage(String message) {
         log.info("Received <" + message + ">");
     }

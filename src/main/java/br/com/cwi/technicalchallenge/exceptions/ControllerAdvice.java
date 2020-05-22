@@ -11,13 +11,15 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 @Slf4j
 public class ControllerAdvice {
 
-    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "There is a inputMismatchException in one of the attributes.")
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "There is a notReadableException in one of the attributes.")
     @ExceptionHandler(HttpMessageNotReadableException.class)
-    public void handleHttpMessageNotReadableException() {
+    public void handleHttpMessageNotReadableException(Exception e) {
+        log.error(e.getMessage(), e);
     }
 
     @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "There is a inputMismatchException in one of the attributes.")
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public void MethodArgumentTypeMismatchException() {
+    public void methodArgumentTypeMismatchException(Exception e) {
+        log.error(e.getMessage(), e);
     }
 }

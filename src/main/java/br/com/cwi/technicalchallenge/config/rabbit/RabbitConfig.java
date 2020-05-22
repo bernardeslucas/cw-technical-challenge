@@ -10,34 +10,24 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RabbitConfig {
-    public static final String topicExchangeName = "spring-boot-exchange";
+    public static final String TOPIC_EXCHANGE_NAME = "spring-boot-exchange";
 
-    public static final String queueName = "spring-boot";
+    public static final String QUEUE_NAME = "spring-boot";
 
     @Bean
     Queue queue() {
-        return new Queue(queueName, false);
+        return new Queue(QUEUE_NAME, false);
     }
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange(topicExchangeName);
+        return new TopicExchange(TOPIC_EXCHANGE_NAME);
     }
 
     @Bean
     Binding binding(Queue queue, TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with("foo.bar.#");
     }
-
-//    @Bean
-//    SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
-//                                             MessageListenerAdapter listenerAdapter) {
-//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-//        container.setConnectionFactory(connectionFactory);
-//        container.setQueueNames(queueName);
-//        container.setMessageListener(listenerAdapter);
-//        return container;
-//    }
 
     @Bean
     MessageListenerAdapter listenerAdapter(Receiver receiver) {

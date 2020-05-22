@@ -11,9 +11,9 @@ Para maiores informações sobre o programa, acesse [cwi.com.br](https://cwi.com
 >- Contabilizar os votos e dar o resultado da votação na pauta.
  
 ## Execução do projeto 
-A última versão commitada encontra-se hospeada no heroku, [aqui](https://cwi-pauta.herokuapp.com/). Ao entrar no site, caso a aplicação esteja dormindo (30 minutos de inatividade), irá demorar um pouquinho para acordar, após isso, os testes podem ser feitos pelo Swagger UI, [aqui](https://cwi-pauta.herokuapp.com/swagger-ui.html).
+A última versão commitada encontra-se hospeada no heroku, [aqui](https://cwi-pauta.herokuapp.com/swagger-ui.html). Ao entrar no site, caso a aplicação esteja dormindo (30 minutos de inatividade), irá demorar um pouquinho para acordar, após isso, os testes podem ser feitos pelo Swagger UI.
 
-A aplicação também pode ser testada localmente (localmente a aplicação também se conecta ao mesmo banco de dados da versão hospedada no heroku) diretamente pelo .jar:
+A aplicação também pode ser testada localmente (localmente a aplicação se conecta ao mesmo banco de dados e no mesmo server do RabbitMQ da versão hospedada no heroku) diretamente pelo .jar:
 
 ```java -jar ./target/technical-challenge-0.0.1-SNAPSHOT.jar```
 
@@ -48,6 +48,25 @@ integração, fácil configuração, tanto online quanto offline.
 ```
 Com o auxílio do Spring, foi organizado as categorias de erro em Classes enum para melhor organização
 e escalonamento. Os logs foram feitos com o @Slf4j devido a fácil implementação.
+```
+#### [RabbitMQ](https://www.rabbitmq.com/) e [Quartz](http://www.quartz-scheduler.org/)
+```
+Para a mensageria do resultado da votação foram utilizadas as duas ferramentas acima. Ao iniciar a 
+sessão, é agendado um Job no Quartz com o EndDate da sessão de votação, ao ser disparado, ele faz 
+o publishing do resultado, enquanto que na medida em que a aplicação está ligada, há um receiver (pseudo plataforma)
+que lê essa mensagem na fila e faz o logging dela. 
+```
+#### [Sonarqube](https://www.sonarqube.org/)
+```
+Como ferramenta de qualidade, o projeto foi inspecionado pela ferramenta acima, onde nos mostrou 
+alguns imports esquecido e não utilizados, nomenclaturas fora do padrão, dentre outros pequenos 
+erros que foram corrigidos posteriormente a análise.
+```
+#### Versionamento API
+```
+Foi utilizado o sistema de versionamento por URL, a aplicação hoje roda em .v1/, pensando em futuras
+versões, seria feito outra layer de controller/service mudando o path e reaproveitando as demais layers
+da aplicação.
 ```
 #### [Swagger](https://swagger.io/) - Documentação
 ```

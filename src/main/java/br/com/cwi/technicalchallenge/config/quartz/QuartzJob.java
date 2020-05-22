@@ -15,12 +15,11 @@ public class QuartzJob implements Job {
 
     @Override
     public void execute(JobExecutionContext exc) throws JobExecutionException {
-//        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
 
         JobDataMap data = exc.getJobDetail().getJobDataMap();
         long id = data.getLong("idTopic");
 
-        service.sendResult(service.findById(id).getResult());
+        service.sendResult("idTopic: " + id + " - " + service.findById(id).getResult());
 
         try {
             exc.getScheduler().shutdown();

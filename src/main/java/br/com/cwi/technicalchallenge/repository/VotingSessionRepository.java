@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VotingSessionRepository extends JpaRepository<VotingSession, Long> {
 
-    public VotingSession findByTopic(Topic topic);
+    VotingSession findByTopic(Topic topic);
 }

@@ -3,10 +3,10 @@ package br.com.cwi.technicalchallenge.service;
 import br.com.cwi.technicalchallenge.config.quartz.AutowiringSpringBeanJobFactory;
 import br.com.cwi.technicalchallenge.config.quartz.QuartzJob;
 import br.com.cwi.technicalchallenge.config.rabbit.RabbitConfig;
-import br.com.cwi.technicalchallenge.controller.request.TopicRequest;
-import br.com.cwi.technicalchallenge.controller.request.VoteRequest;
-import br.com.cwi.technicalchallenge.controller.request.VotingSessionRequest;
-import br.com.cwi.technicalchallenge.controller.response.TopicResponse;
+import br.com.cwi.technicalchallenge.controller.v1.request.TopicRequest;
+import br.com.cwi.technicalchallenge.controller.v1.request.VoteRequest;
+import br.com.cwi.technicalchallenge.controller.v1.request.VotingSessionRequest;
+import br.com.cwi.technicalchallenge.controller.v1.response.TopicResponse;
 import br.com.cwi.technicalchallenge.domain.*;
 import br.com.cwi.technicalchallenge.exceptions.TopicExceptionEnum;
 import br.com.cwi.technicalchallenge.exceptions.VoteExceptionEnum;
@@ -105,8 +105,7 @@ public class TopicService {
         return topicRepository.findAll()
                 .stream()
                 .map(this::getTopicResponse)
-                .collect(Collectors.toList())
-                ;
+                .collect(Collectors.toList());
     }
 
     @Transactional
@@ -117,8 +116,7 @@ public class TopicService {
             //throw new
             throw new ResponseStatusException(TopicExceptionEnum.TOPIC_NOT_FOUND.getHttpStatus(),
                     TopicExceptionEnum.TOPIC_NOT_FOUND.getMessage());
-//            throw new HttpClientErrorException(TopicExceptionEnum.TOPIC_NOT_FOUND.getHttpStatus(),
-//                   TopicExceptionEnum.TOPIC_NOT_FOUND.getMessage());
+
         }
         return getTopicResponse(topic);
     }
@@ -259,7 +257,7 @@ public class TopicService {
 
     public void sendResult(String message) {
         log.info("Sending message to Rabbit...");
-        rabbitTemplate.convertAndSend(RabbitConfig.topicExchangeName, "foo.bar.baz", message);
+        rabbitTemplate.convertAndSend(RabbitConfig.TOPIC_EXCHANGE_NAME, "foo.bar.baz", message);
     }
 
     private void scheduleEndSession(long id, int minutesToRun) throws SchedulerException {

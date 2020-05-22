@@ -1,9 +1,10 @@
 package br.com.cwi.technicalchallenge;
 
-import br.com.cwi.technicalchallenge.controller.request.TopicRequest;
-import br.com.cwi.technicalchallenge.controller.response.TopicResponse;
+import br.com.cwi.technicalchallenge.controller.v1.request.TopicRequest;
+import br.com.cwi.technicalchallenge.controller.v1.response.TopicResponse;
 import br.com.cwi.technicalchallenge.domain.Topic;
 import br.com.cwi.technicalchallenge.repository.TopicRepository;
+import br.com.cwi.technicalchallenge.repository.VotingSessionRepository;
 import br.com.cwi.technicalchallenge.service.TopicService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
@@ -32,6 +33,9 @@ public class TopicServiceTest {
 
     @Mock
     private TopicRepository topicRepository;
+
+    @Mock
+    private VotingSessionRepository votingSessionRepository;
 
     @InjectMocks
     private TopicService topicService;
