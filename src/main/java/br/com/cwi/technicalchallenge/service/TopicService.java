@@ -1,5 +1,8 @@
 package br.com.cwi.technicalchallenge.service;
 
+import br.com.cwi.technicalchallenge.config.quartz.AutowiringSpringBeanJobFactory;
+import br.com.cwi.technicalchallenge.config.quartz.QuartzJob;
+import br.com.cwi.technicalchallenge.config.rabbit.RabbitConfig;
 import br.com.cwi.technicalchallenge.controller.request.TopicRequest;
 import br.com.cwi.technicalchallenge.controller.request.VoteRequest;
 import br.com.cwi.technicalchallenge.controller.request.VotingSessionRequest;
@@ -13,9 +16,16 @@ import br.com.cwi.technicalchallenge.repository.TopicRepository;
 import br.com.cwi.technicalchallenge.repository.VoteRepository;
 import br.com.cwi.technicalchallenge.repository.VotingSessionRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.quartz.*;
+import org.quartz.impl.StdSchedulerFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -23,23 +33,27 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.quartz.DateBuilder.futureDate;
+
 @Service
+@AllArgsConstructor
 @Slf4j
 public class TopicService {
 
-    private final ObjectMapper objectMapper;
     @Autowired
-    private TopicRepository topicRepository;
+    ObjectMapper objectMapper;
     @Autowired
-    private AssociateRepository associateRepository;
+    RabbitTemplate rabbitTemplate;
     @Autowired
-    private VotingSessionRepository votingSessionRepository;
+    TopicRepository topicRepository;
     @Autowired
-    private VoteRepository voteRepository;
-
-    public TopicService(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
-    }
+    AssociateRepository associateRepository;
+    @Autowired
+    VotingSessionRepository votingSessionRepository;
+    @Autowired
+    VoteRepository voteRepository;
+    @Autowired
+    ApplicationContext applicationContext;
 
     //topic
     private boolean isTopicRequestValid(Topic topic) {
@@ -51,7 +65,7 @@ public class TopicService {
                 !topic.getTitle().isEmpty();
     }
 
-    public void create(TopicRequest topicRequest) {
+    public Topic save(TopicRequest topicRequest) {
 
         Topic topic = objectMapper.convertValue(topicRequest, Topic.class);
 
@@ -63,9 +77,10 @@ public class TopicService {
             throw new ResponseStatusException(TopicExceptionEnum.TOPIC_REQUEST_INVALID.getHttpStatus(),
                     TopicExceptionEnum.TOPIC_REQUEST_INVALID.getMessage());
         }
+        return topic;
     }
 
-    private TopicResponse getTopicResponse(Topic topic) {
+    public TopicResponse getTopicResponse(Topic topic) {
 
         TopicResponse topicResponse = objectMapper.convertValue(topic, TopicResponse.class);
 
@@ -80,16 +95,21 @@ public class TopicService {
         } else {
             topicResponse.setResult("Voting session didn't start yet.");
         }
+
         return topicResponse;
     }
 
+    @Transactional
     public List<TopicResponse> findAll() {
 
-        return topicRepository.findAll().stream()
+        return topicRepository.findAll()
+                .stream()
                 .map(this::getTopicResponse)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList())
+                ;
     }
 
+    @Transactional
     public TopicResponse findById(long idTopic) {
         Topic topic = topicRepository.findById(idTopic);
 
@@ -97,8 +117,9 @@ public class TopicService {
             //throw new
             throw new ResponseStatusException(TopicExceptionEnum.TOPIC_NOT_FOUND.getHttpStatus(),
                     TopicExceptionEnum.TOPIC_NOT_FOUND.getMessage());
+//            throw new HttpClientErrorException(TopicExceptionEnum.TOPIC_NOT_FOUND.getHttpStatus(),
+//                   TopicExceptionEnum.TOPIC_NOT_FOUND.getMessage());
         }
-
         return getTopicResponse(topic);
     }
 
@@ -132,6 +153,12 @@ public class TopicService {
             } else {
                 votingSession.setEndDate(LocalDateTime.now().plusMinutes(votingSessionRequest.getDurationMinutes()));
             }
+
+            try {
+                scheduleEndSession(idTopic, votingSessionRequest.getDurationMinutes());
+            } catch (SchedulerException e) {
+                e.printStackTrace();
+            }
             votingSessionRepository.save(votingSession);
         } else {
             throw new ResponseStatusException(VotingSessionExceptionEnum.VOTING_SESSION_REQUEST_INVALID.getHttpStatus(),
@@ -145,16 +172,18 @@ public class TopicService {
         String uri = "https://user-info.herokuapp.com/users/" + cpf;
 
         RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject(uri, String.class);
-
-        if (result.isEmpty()) {
+        String result = "";
+        try {
+            result = restTemplate.getForObject(uri, String.class);
+        } catch (HttpClientErrorException e){
             throw new ResponseStatusException(VoteExceptionEnum.CPF_INVALID.getHttpStatus(),
                     VoteExceptionEnum.CPF_INVALID.getMessage());
-        } else if (result.contains("UNABLE")) {
+        }
+
+        if (result.contains("UNABLE")) {
             throw new ResponseStatusException(VoteExceptionEnum.CPF_UNABLE_TO_VOTE.getHttpStatus(),
                     VoteExceptionEnum.CPF_UNABLE_TO_VOTE.getMessage());
         }
-
     }
 
     private boolean isVoteRequestValid(VoteRequest voteRequest) {
@@ -182,7 +211,6 @@ public class TopicService {
             }
 
             Associate associate = associateRepository.findById(voteRequest.getIdAssociate());
-            System.out.println(voteRequest.getIdAssociate());
 
             if (associate == null) {
                 throw new ResponseStatusException(VoteExceptionEnum.ASSOCIATE_NOT_FOUND.getHttpStatus(),
@@ -207,6 +235,7 @@ public class TopicService {
 
             votingSessionRepository.save(votingSession);
             voteRepository.save(vote);
+
         } else {
             throw new ResponseStatusException(VoteExceptionEnum.VOTE_REQUEST_INVALID.getHttpStatus(),
                     VoteExceptionEnum.VOTE_REQUEST_INVALID.getMessage());
@@ -228,7 +257,31 @@ public class TopicService {
         return "%s votation -> YES votes: [" + countYesVotes + "], NO votes: [" + countNoVotes + "].";
     }
 
+    public void sendResult(String message) {
+        log.info("Sending message to Rabbit...");
+        rabbitTemplate.convertAndSend(RabbitConfig.topicExchangeName, "foo.bar.baz", message);
+    }
 
+    private void scheduleEndSession(long id, int minutesToRun) throws SchedulerException {
+        // job
+        JobDetail job = JobBuilder.newJob(QuartzJob.class).build();
+        job.getJobDataMap().put("idTopic", id);
 
+        // trigger
+        SimpleTrigger trigger = (SimpleTrigger) TriggerBuilder.newTrigger()
+                .startAt(futureDate(minutesToRun, DateBuilder.IntervalUnit.MINUTE))
+                .build();
+
+        // schedule it
+        Scheduler scheduler = new StdSchedulerFactory().getScheduler();
+
+        AutowiringSpringBeanJobFactory autowiringSpringBeanJobFactory = new AutowiringSpringBeanJobFactory();
+        autowiringSpringBeanJobFactory.setApplicationContext(applicationContext);
+        scheduler.setJobFactory(autowiringSpringBeanJobFactory);
+
+        scheduler.start();
+        scheduler.scheduleJob(job, trigger);
+
+    }
 
 }

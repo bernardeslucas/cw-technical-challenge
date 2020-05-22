@@ -24,11 +24,11 @@ public class Vote {
     @Column(name = "date")
     private LocalDateTime voteDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "associate_id")
     private Associate associate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "voting_session_id")
     private VotingSession votingSession;
 

@@ -1,9 +1,14 @@
 package br.com.cwi.technicalchallenge.controller.response;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class TopicResponse {
 

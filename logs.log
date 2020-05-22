@@ -1,61 +1,583 @@
-18-05-2020 21:26:01 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
-18-05-2020 21:26:02 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 18072 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
-18-05-2020 21:26:02 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
-18-05-2020 21:26:03 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18-05-2020 21:26:03 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 91ms. Found 4 JPA repository interfaces.
-18-05-2020 21:26:04 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
-18-05-2020 21:26:04 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2223 ms
-18-05-2020 21:26:04 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
-18-05-2020 21:26:04 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
-18-05-2020 21:26:04 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-18-05-2020 21:26:04 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
-18-05-2020 21:26:06 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
-18-05-2020 21:26:07 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-18-05-2020 21:26:11 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18-05-2020 21:26:11 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18-05-2020 21:26:11 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18-05-2020 21:26:11 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-18-05-2020 21:26:12 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
-18-05-2020 21:26:12 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
-18-05-2020 21:26:12 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
-18-05-2020 21:26:12 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
-18-05-2020 21:26:12 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
-18-05-2020 21:26:12 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 10.818 seconds (JVM running for 11.293)
-18-05-2020 21:27:51 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
-18-05-2020 21:27:51 INFO  DispatcherServlet:547 - Completed initialization in 8 ms
-18-05-2020 21:27:51 INFO  TopicController:39 - Searching all topics...
-18-05-2020 21:27:55 INFO  TopicController:39 - Searching all topics...
-18-05-2020 21:29:40 INFO  TopicController:65 - Creating topic...
-18-05-2020 21:29:41 INFO  TopicController:72 - Topic successfully created
-18-05-2020 21:29:49 INFO  TopicController:39 - Searching all topics...
-18-05-2020 21:31:48 INFO  TopicController:50 - Searching a specific topic...
-18-05-2020 21:33:44 INFO  SpringBootTestContextBootstrapper:308 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests], using SpringBootContextLoader
-18-05-2020 21:33:44 INFO  AbstractContextLoader:264 - Could not detect default resource locations for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-18-05-2020 21:33:44 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: CwiTechnicalChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18-05-2020 21:33:45 INFO  SpringBootTestContextBootstrapper:237 - Found @SpringBootConfiguration br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication for test class br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests
-18-05-2020 21:33:45 INFO  SpringBootTestContextBootstrapper:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-18-05-2020 21:33:45 INFO  SpringBootTestContextBootstrapper:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45099dd3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13e344d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1ffaf86, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6574a52c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c1a5b54, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c7696c6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@60099951, org.springframework.test.context.event.EventPublishingTestExecutionListener@20140db9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1e6a3214, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@368247b9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1a6d8329, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a942c18, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@55a147cc]
-18-05-2020 21:33:45 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
-18-05-2020 21:33:45 INFO  CwiTechnicalChallengeApplicationTests:55 - Starting CwiTechnicalChallengeApplicationTests on LUCAS-PC with PID 18960 (started by Lucas in E:\github\technical-challenge)
-18-05-2020 21:33:45 INFO  CwiTechnicalChallengeApplicationTests:651 - No active profile set, falling back to default profiles: default
-18-05-2020 21:33:46 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18-05-2020 21:33:46 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 76ms. Found 4 JPA repository interfaces.
-18-05-2020 21:33:46 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
-18-05-2020 21:33:47 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
-18-05-2020 21:33:47 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-18-05-2020 21:33:47 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
-18-05-2020 21:33:50 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
-18-05-2020 21:33:50 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-18-05-2020 21:33:54 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18-05-2020 21:33:54 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18-05-2020 21:33:55 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18-05-2020 21:33:55 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-18-05-2020 21:33:56 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
-18-05-2020 21:33:56 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
-18-05-2020 21:33:56 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
-18-05-2020 21:33:56 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
-18-05-2020 21:33:56 INFO  CwiTechnicalChallengeApplicationTests:61 - Started CwiTechnicalChallengeApplicationTests in 11.633 seconds (JVM running for 12.544)
-18-05-2020 21:33:56 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
-18-05-2020 21:33:56 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
-18-05-2020 21:33:56 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
-18-05-2020 21:33:58 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 00:53:49 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 00:53:49 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 10728 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 00:53:49 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 00:53:50 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 00:53:50 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 118ms. Found 4 JPA repository interfaces.
+22-05-2020 00:53:51 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 00:53:51 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2306 ms
+22-05-2020 00:53:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 00:53:51 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 00:53:52 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 00:53:52 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 00:53:54 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 00:53:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 00:53:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 00:53:58 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 00:53:59 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 00:53:59 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 00:53:59 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 00:53:59 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 00:53:59 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 00:53:59 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 00:53:59 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 00:53:59 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 00:53:59 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 00:53:59 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 00:53:59 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6edd4fe2
+22-05-2020 00:53:59 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 00:53:59 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 00:54:00 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 00:54:00 INFO  CachingConnectionFactory:524 - Attempting to connect to: [localhost:5672]
+22-05-2020 00:54:00 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#6326c5ec:0/SimpleConnection@4f7ef948 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52553]
+22-05-2020 00:54:00 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 00:54:00 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 00:54:00 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 00:54:00 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 00:54:00 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 11.469 seconds (JVM running for 11.909)
+22-05-2020 00:55:24 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+22-05-2020 00:55:24 INFO  DispatcherServlet:547 - Completed initialization in 8 ms
+22-05-2020 00:55:24 INFO  TopicController:39 - Searching all topics...
+22-05-2020 00:55:36 INFO  TopicController:86 - Starting voting session...
+22-05-2020 00:55:37 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 00:55:37 INFO  SimpleThreadPool:268 - Job execution threads will use class loader of thread: http-nio-8080-exec-3
+22-05-2020 00:55:37 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 00:55:37 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 00:55:37 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 00:55:37 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 00:55:37 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+22-05-2020 00:55:37 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 00:55:37 INFO  QuartzScheduler:2293 - JobFactory set to: br.com.cwi.technicalchallenge.config.quartz.AutowiringSpringBeanJobFactory@54c253b2
+22-05-2020 00:55:37 INFO  QuartzScheduler:547 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 00:55:38 INFO  TopicController:94 - Voting Session started in the specific topic informed!
+22-05-2020 00:55:53 INFO  TopicController:107 - Registering vote...
+22-05-2020 00:55:55 ERROR TopicController:112 - 400 BAD_REQUEST "CPF not allowed to vote."
+org.springframework.web.server.ResponseStatusException: 400 BAD_REQUEST "CPF not allowed to vote."
+	at br.com.cwi.technicalchallenge.service.TopicService.checkCpfStatus(TopicService.java:181)
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:222)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$321e960c.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 00:55:57 INFO  TopicController:107 - Registering vote...
+22-05-2020 00:55:59 ERROR TopicController:112 - 400 BAD_REQUEST "CPF not allowed to vote."
+org.springframework.web.server.ResponseStatusException: 400 BAD_REQUEST "CPF not allowed to vote."
+	at br.com.cwi.technicalchallenge.service.TopicService.checkCpfStatus(TopicService.java:181)
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:222)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$321e960c.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 00:56:10 INFO  TopicController:107 - Registering vote...
+22-05-2020 00:56:12 INFO  TopicController:115 - Vote successfully registered!
+22-05-2020 00:56:50 INFO  TopicController:107 - Registering vote...
+22-05-2020 00:57:38 INFO  TopicController:107 - Registering vote...
+22-05-2020 00:57:38 INFO  TopicService:258 - Sending message to coelhinho...
+22-05-2020 00:57:38 INFO  QuartzScheduler:666 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+22-05-2020 00:57:38 INFO  QuartzScheduler:585 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+22-05-2020 00:57:38 INFO  QuartzScheduler:740 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+22-05-2020 00:57:38 INFO  Receiver:18 - Received <Closed votation -> YES votes: [1], NO votes: [0].>
+22-05-2020 00:57:38 ERROR TopicController:112 - 400 BAD_REQUEST "This voting session is closed."
+org.springframework.web.server.ResponseStatusException: 400 BAD_REQUEST "This voting session is closed."
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:207)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$321e960c.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 01:03:02 INFO  TopicController:39 - Searching all topics...
+22-05-2020 01:03:12 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:03:12 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 14280 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:03:12 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:03:13 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:03:13 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 91ms. Found 4 JPA repository interfaces.
+22-05-2020 01:03:14 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:03:14 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2117 ms
+22-05-2020 01:03:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:03:15 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:03:15 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:03:15 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:03:17 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:03:17 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:03:21 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:03:21 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:03:22 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:03:22 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:03:22 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:03:23 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:03:23 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:03:23 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:03:23 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:03:23 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:03:23 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:03:23 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:03:23 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@9f2fe2e
+22-05-2020 01:03:23 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:03:23 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:03:23 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:03:23 INFO  CachingConnectionFactory:524 - Attempting to connect to: [localhost:5672]
+22-05-2020 01:03:23 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#45796b2a:0/SimpleConnection@29a1ec65 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52685]
+22-05-2020 01:03:23 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:03:23 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:03:23 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:03:23 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:03:23 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 11.026 seconds (JVM running for 11.46)
+22-05-2020 01:03:33 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+22-05-2020 01:03:33 INFO  DispatcherServlet:547 - Completed initialization in 9 ms
+22-05-2020 01:03:33 INFO  TopicController:107 - Registering vote...
+22-05-2020 01:03:35 ERROR TopicController:112 - 404 NOT_FOUND "CPF invalid."
+org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "CPF invalid."
+	at br.com.cwi.technicalchallenge.service.TopicService.checkCpfStatus(TopicService.java:180)
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:226)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$5bcef88f.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 01:08:36 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:08:37 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 2704 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:08:37 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:08:38 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:08:38 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 86ms. Found 4 JPA repository interfaces.
+22-05-2020 01:08:39 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:08:39 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2150 ms
+22-05-2020 01:08:39 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:08:39 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:08:39 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:08:39 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:08:41 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:08:41 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:08:45 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:08:45 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:08:46 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:08:46 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:08:46 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:08:47 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:08:47 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:08:47 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:08:47 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:08:47 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:08:47 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:08:47 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:08:47 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1280bae3
+22-05-2020 01:08:47 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:08:47 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:08:47 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:08:47 INFO  CachingConnectionFactory:524 - Attempting to connect to: [localhost:5672]
+22-05-2020 01:08:47 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#5731caaf:0/SimpleConnection@18f8ebd4 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52777]
+22-05-2020 01:08:47 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:08:47 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:08:47 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:08:47 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:08:47 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 10.91 seconds (JVM running for 11.342)
+22-05-2020 01:08:50 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+22-05-2020 01:08:50 INFO  DispatcherServlet:547 - Completed initialization in 7 ms
+22-05-2020 01:08:50 INFO  TopicController:107 - Registering vote...
+22-05-2020 01:08:52 ERROR TopicController:112 - 400 BAD_REQUEST "CPF not allowed to vote."
+org.springframework.web.server.ResponseStatusException: 400 BAD_REQUEST "CPF not allowed to vote."
+	at br.com.cwi.technicalchallenge.service.TopicService.checkCpfStatus(TopicService.java:185)
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:225)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$8508e009.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 01:09:32 INFO  TopicController:107 - Registering vote...
+22-05-2020 01:09:34 ERROR TopicController:112 - 404 NOT_FOUND "CPF invalid."
+org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "CPF invalid."
+	at br.com.cwi.technicalchallenge.service.TopicService.checkCpfStatus(TopicService.java:180)
+	at br.com.cwi.technicalchallenge.service.TopicService.createVote(TopicService.java:225)
+	at br.com.cwi.technicalchallenge.service.TopicService$$FastClassBySpringCGLIB$$4d1ee783.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at br.com.cwi.technicalchallenge.service.TopicService$$EnhancerBySpringCGLIB$$8508e009.createVote(<generated>)
+	at br.com.cwi.technicalchallenge.controller.TopicController.vote(TopicController.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+22-05-2020 01:11:09 INFO  TopicController:49 - Searching a specific topic...
+22-05-2020 01:11:10 INFO  TopicController:58 - Found it!
+22-05-2020 01:21:07 INFO  SpringBootTestContextBootstrapper:308 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests], using SpringBootContextLoader
+22-05-2020 01:21:07 INFO  AbstractContextLoader:264 - Could not detect default resource locations for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+22-05-2020 01:21:07 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: CwiTechnicalChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2020 01:21:08 INFO  SpringBootTestContextBootstrapper:237 - Found @SpringBootConfiguration br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication for test class br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests
+22-05-2020 01:21:08 INFO  SpringBootTestContextBootstrapper:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22-05-2020 01:21:08 INFO  SpringBootTestContextBootstrapper:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@58cbafc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2034b64c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75d3a5e0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74d1dc36, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7161d8d1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@74e28667, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1cf6d1be, org.springframework.test.context.event.EventPublishingTestExecutionListener@663c9e7a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19e4653c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@795509d9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53045c6c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5149d738, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6bbe85a8]
+22-05-2020 01:21:08 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:21:08 INFO  CwiTechnicalChallengeApplicationTests:55 - Starting CwiTechnicalChallengeApplicationTests on LUCAS-PC with PID 8496 (started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:21:08 INFO  CwiTechnicalChallengeApplicationTests:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:21:09 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:21:09 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 74ms. Found 4 JPA repository interfaces.
+22-05-2020 01:21:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:21:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:21:10 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:21:10 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:21:12 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:21:12 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:21:16 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:21:16 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:21:17 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:21:18 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:21:18 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:21:18 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:21:18 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:21:18 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:21:18 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:21:18 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:21:18 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:21:18 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:21:18 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@55b45ea1
+22-05-2020 01:21:18 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:21:18 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:21:18 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:21:19 INFO  CachingConnectionFactory:524 - Attempting to connect to: [localhost:5672]
+22-05-2020 01:21:19 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#4af70b83:0/SimpleConnection@e4348c0 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53017]
+22-05-2020 01:21:19 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:21:19 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:21:19 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:21:19 INFO  CwiTechnicalChallengeApplicationTests:61 - Started CwiTechnicalChallengeApplicationTests in 11.029 seconds (JVM running for 11.925)
+22-05-2020 01:21:19 INFO  SimpleMessageListenerContainer:645 - Waiting for workers to finish.
+22-05-2020 01:21:20 INFO  SimpleMessageListenerContainer:648 - Successfully waited for workers to finish.
+22-05-2020 01:21:20 INFO  QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22-05-2020 01:21:20 INFO  SchedulerFactoryBean:845 - Shutting down Quartz Scheduler
+22-05-2020 01:21:20 INFO  QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+22-05-2020 01:21:20 INFO  QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22-05-2020 01:21:20 INFO  QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+22-05-2020 01:21:20 INFO  SimpleMessageListenerContainer:1231 - Shutdown ignored - container is not active already
+22-05-2020 01:21:20 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:21:20 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:21:20 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:21:21 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
