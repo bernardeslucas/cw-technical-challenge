@@ -1,19 +1,26 @@
 package br.com.cwi.technicalchallenge.config.rabbit;
 
+import com.mchange.v2.lang.SystemUtils;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import sun.plugin2.util.SystemUtil;
+
+import java.net.URI;
+import java.net.URISyntaxException;
 
 @Component
 public class RabbitConfig {
     public static final String topicExchangeName = "spring-boot-exchange";
 
     public static final String queueName = "spring-boot";
-
+    
     @Bean
     Queue queue() {
         return new Queue(queueName, false);

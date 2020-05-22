@@ -581,3 +581,1050 @@ org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "CPF inval
 22-05-2020 01:21:20 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
 22-05-2020 01:21:20 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
 22-05-2020 01:21:21 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 01:43:05 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:43:05 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 11520 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:43:05 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:43:06 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:43:06 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 90ms. Found 4 JPA repository interfaces.
+22-05-2020 01:43:07 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:43:07 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2135 ms
+22-05-2020 01:43:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:43:08 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:43:08 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:43:08 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:43:10 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:43:10 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:43:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:43:14 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:43:14 WARN  AnnotationConfigServletWebServerApplicationContext:558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [br/com/cwi/technicalchallenge/config/rabbit/RabbitConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+22-05-2020 01:43:14 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:43:14 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:43:15 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 01:43:15 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-05-2020 01:43:15 ERROR SpringApplication:826 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [br/com/cwi/technicalchallenge/config/rabbit/RabbitConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication.main(CwiTechnicalChallengeApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [br/com/cwi/technicalchallenge/config/rabbit/RabbitConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [br/com/cwi/technicalchallenge/config/rabbit/RabbitConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [br/com/cwi/technicalchallenge/config/rabbit/RabbitConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 46 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.ConnectionFactory]: Factory method 'connectionFactory' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 60 more
+Caused by: java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3042)
+	at java.net.URI.<init>(URI.java:588)
+	at br.com.cwi.technicalchallenge.config.rabbit.RabbitConfig.connectionFactory(RabbitConfig.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 61 more
+22-05-2020 01:43:57 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:43:57 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 7052 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:43:57 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:43:58 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:43:58 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 96ms. Found 4 JPA repository interfaces.
+22-05-2020 01:43:59 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:43:59 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2081 ms
+22-05-2020 01:43:59 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:43:59 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:43:59 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:44:00 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:44:02 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:44:02 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:44:06 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:44:06 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:44:07 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:44:07 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:44:07 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:44:07 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:44:07 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:44:07 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:44:07 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:44:07 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:44:07 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:44:07 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:44:07 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@b4d83ac
+22-05-2020 01:44:07 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:44:07 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:44:07 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:44:07 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:07 INFO  SimpleMessageListenerContainer:1766 - Broker not available; cannot force queue declarations during start: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+22-05-2020 01:44:07 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:07 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:44:07 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:07 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:44:07 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:44:07 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:44:07 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 10.966 seconds (JVM running for 11.413)
+22-05-2020 01:44:12 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@62f37bfd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:44:12 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:12 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:44:12 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:17 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@1be7f4ed: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:44:17 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:17 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:44:17 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:22 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@6bdfd70c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:44:22 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:22 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:44:22 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:44:50 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:44:51 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 16896 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:44:51 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:44:52 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:44:52 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 87ms. Found 4 JPA repository interfaces.
+22-05-2020 01:44:53 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:44:53 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2077 ms
+22-05-2020 01:44:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:44:53 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:44:53 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:44:53 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:44:55 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:44:55 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:44:59 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:44:59 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:44:59 ERROR Address:95 - Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:44:59 WARN  AnnotationConfigServletWebServerApplicationContext:558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:44:59 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:44:59 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:45:00 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 01:45:00 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-05-2020 01:45:00 ERROR SpringApplication:826 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication.main(CwiTechnicalChallengeApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 46 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 60 more
+Caused by: java.lang.IllegalArgumentException: Address amqp://fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at com.rabbitmq.client.Address.parseHost(Address.java:96)
+	at com.rabbitmq.client.Address.parseAddress(Address.java:158)
+	at com.rabbitmq.client.Address.parseAddresses(Address.java:173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.setAddresses(AbstractConnectionFactory.java:286)
+	at org.springframework.boot.context.properties.PropertyMapper$Source.to(PropertyMapper.java:316)
+	at org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration$RabbitConnectionFactoryCreator.rabbitConnectionFactory(RabbitAutoConfiguration.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 61 more
+22-05-2020 01:45:42 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:45:42 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 14260 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:45:42 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:45:43 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:45:43 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 86ms. Found 4 JPA repository interfaces.
+22-05-2020 01:45:44 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:45:44 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2087 ms
+22-05-2020 01:45:44 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:45:44 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:45:44 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:45:45 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:45:46 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:45:46 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:45:51 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:45:51 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:45:51 ERROR Address:95 - Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:45:51 WARN  AnnotationConfigServletWebServerApplicationContext:558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:45:51 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:45:51 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:45:52 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 01:45:52 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-05-2020 01:45:52 ERROR SpringApplication:826 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication.main(CwiTechnicalChallengeApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 46 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 60 more
+Caused by: java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at com.rabbitmq.client.Address.parseHost(Address.java:96)
+	at com.rabbitmq.client.Address.parseAddress(Address.java:158)
+	at com.rabbitmq.client.Address.parseAddresses(Address.java:173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.setAddresses(AbstractConnectionFactory.java:286)
+	at org.springframework.boot.context.properties.PropertyMapper$Source.to(PropertyMapper.java:316)
+	at org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration$RabbitConnectionFactoryCreator.rabbitConnectionFactory(RabbitAutoConfiguration.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 61 more
+22-05-2020 01:47:24 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:47:24 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 9800 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:47:24 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:47:26 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:47:26 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 101ms. Found 4 JPA repository interfaces.
+22-05-2020 01:47:27 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:47:27 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2245 ms
+22-05-2020 01:47:27 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:47:27 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:47:27 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:47:27 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:47:29 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:47:29 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:47:33 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:47:33 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:47:33 ERROR Address:95 - Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:47:33 WARN  AnnotationConfigServletWebServerApplicationContext:558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+22-05-2020 01:47:33 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:47:33 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:47:34 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+22-05-2020 01:47:34 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-05-2020 01:47:34 ERROR SpringApplication:826 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJob': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication.main(CwiTechnicalChallengeApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topicService' defined in file [E:\github\technical-challenge\target\classes\br\com\cwi\technicalchallenge\service\TopicService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rabbitTemplate' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitTemplateConfiguration.class]: Unsatisfied dependency expressed through method 'rabbitTemplate' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/amqp/RabbitAutoConfiguration$RabbitConnectionFactoryCreator.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 46 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.amqp.rabbit.connection.CachingConnectionFactory]: Factory method 'rabbitConnectionFactory' threw exception; nested exception is java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 60 more
+Caused by: java.lang.IllegalArgumentException: Address //fssdhlxb:l61EbwA_kcg5zy2OUx_qdPqndcNzYxrZ@jaguar.rmq.cloudamqp.com/fssdhlxb:5672 seems to contain an unquoted IPv6 address. Make sure you quote IPv6 addresses like so: [2001:db8:85a3:8d3:1319:8a2e:370:7348]
+	at com.rabbitmq.client.Address.parseHost(Address.java:96)
+	at com.rabbitmq.client.Address.parseAddress(Address.java:158)
+	at com.rabbitmq.client.Address.parseAddresses(Address.java:173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.setAddresses(AbstractConnectionFactory.java:286)
+	at org.springframework.boot.context.properties.PropertyMapper$Source.to(PropertyMapper.java:316)
+	at org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration$RabbitConnectionFactoryCreator.rabbitConnectionFactory(RabbitAutoConfiguration.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 61 more
+22-05-2020 01:50:02 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:50:02 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 12888 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:50:02 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:50:03 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:50:03 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 88ms. Found 4 JPA repository interfaces.
+22-05-2020 01:50:04 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:50:04 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2185 ms
+22-05-2020 01:50:04 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:50:04 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:50:04 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:50:05 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:50:07 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:50:07 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:50:11 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:50:11 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:50:12 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:50:12 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:50:12 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:50:12 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:50:12 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:50:12 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:50:12 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:50:12 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:50:12 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:50:12 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:50:12 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@9f2fe2e
+22-05-2020 01:50:12 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:50:12 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:50:12 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:50:12 INFO  CachingConnectionFactory:524 - Attempting to connect to: [jaguar.rmq.cloudamqp.com:5672]
+22-05-2020 01:50:14 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#4b98225c:0/SimpleConnection@29a1ec65 [delegate=amqp://fssdhlxb@54.166.194.23:5672/fssdhlxb, localPort= 53761]
+22-05-2020 01:50:14 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:50:15 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:50:15 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:50:15 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:50:15 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 13.912 seconds (JVM running for 14.345)
+22-05-2020 01:51:13 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:51:13 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 20028 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:51:13 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:51:14 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:51:14 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 80ms. Found 4 JPA repository interfaces.
+22-05-2020 01:51:15 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:51:15 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2277 ms
+22-05-2020 01:51:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:51:15 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:51:16 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:51:16 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:51:18 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:51:18 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:51:22 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:51:22 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:51:23 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:51:23 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:51:23 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:51:23 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:51:23 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:51:23 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:51:23 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:51:23 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:51:23 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:51:23 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:51:23 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3af39e7b
+22-05-2020 01:51:23 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:51:23 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:51:23 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:51:23 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:23 INFO  SimpleMessageListenerContainer:1766 - Broker not available; cannot force queue declarations during start: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+22-05-2020 01:51:23 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:23 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:23 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:23 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:51:23 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:51:24 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:51:24 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 11.139 seconds (JVM running for 11.92)
+22-05-2020 01:51:29 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@6595ffce: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:29 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:29 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:29 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:34 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@6d30451c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:34 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:34 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:34 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:39 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@25d37444: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:39 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:39 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:39 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:44 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@4d418cde: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:44 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:44 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:44 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:49 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@126236dc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:49 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:49 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:49 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:54 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@ee8873d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:54 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:54 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:54 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:59 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@6f2b96d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:51:59 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:51:59 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:51:59 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:52:04 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@7b989869: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:52:04 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:52:04 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:52:04 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:52:09 INFO  SimpleMessageListenerContainer:1424 - Restarting Consumer@7af93881: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+22-05-2020 01:52:09 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:52:09 ERROR SimpleMessageListenerContainer:1817 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1109)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 12 more
+22-05-2020 01:52:09 INFO  CachingConnectionFactory:524 - Attempting to connect to: [${CLOUDAMQP_URL}:5672]
+22-05-2020 01:52:13 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:52:13 INFO  CwiTechnicalChallengeApplication:55 - Starting CwiTechnicalChallengeApplication on LUCAS-PC with PID 15060 (E:\github\technical-challenge\target\classes started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:52:13 INFO  CwiTechnicalChallengeApplication:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:52:14 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:52:14 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 84ms. Found 4 JPA repository interfaces.
+22-05-2020 01:52:15 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+22-05-2020 01:52:15 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 2167 ms
+22-05-2020 01:52:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:52:15 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:52:15 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:52:15 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:52:17 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:52:17 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:52:22 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:52:22 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:52:23 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:52:23 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:52:23 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:52:23 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:52:23 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:52:23 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:52:23 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:52:23 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:52:23 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:52:23 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:52:23 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5f9a8ddc
+22-05-2020 01:52:23 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:52:23 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:52:23 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:52:23 INFO  CachingConnectionFactory:524 - Attempting to connect to: [jaguar.rmq.cloudamqp.com:5672]
+22-05-2020 01:52:24 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#ce655b9:0/SimpleConnection@15bb8ed5 [delegate=amqp://fssdhlxb@54.166.194.23:5672/fssdhlxb, localPort= 53848]
+22-05-2020 01:52:24 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:52:25 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:52:25 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:52:25 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+22-05-2020 01:52:25 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 12.924 seconds (JVM running for 13.352)
