@@ -1628,3 +1628,61 @@ Caused by: java.net.UnknownHostException: ${CLOUDAMQP_URL}
 22-05-2020 01:52:25 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
 22-05-2020 01:52:25 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
 22-05-2020 01:52:25 INFO  CwiTechnicalChallengeApplication:61 - Started CwiTechnicalChallengeApplication in 12.924 seconds (JVM running for 13.352)
+22-05-2020 01:56:20 INFO  SpringBootTestContextBootstrapper:308 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests], using SpringBootContextLoader
+22-05-2020 01:56:20 INFO  AbstractContextLoader:264 - Could not detect default resource locations for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+22-05-2020 01:56:20 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests]: CwiTechnicalChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2020 01:56:20 INFO  SpringBootTestContextBootstrapper:237 - Found @SpringBootConfiguration br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplication for test class br.com.cwi.technicalchallenge.CwiTechnicalChallengeApplicationTests
+22-05-2020 01:56:20 INFO  SpringBootTestContextBootstrapper:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22-05-2020 01:56:20 INFO  SpringBootTestContextBootstrapper:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@75d3a5e0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74d1dc36, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7161d8d1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74e28667, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1cf6d1be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@663c9e7a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19e4653c, org.springframework.test.context.event.EventPublishingTestExecutionListener@795509d9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@53045c6c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5149d738, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6bbe85a8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a7442c7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4be29ed9]
+22-05-2020 01:56:20 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+22-05-2020 01:56:20 INFO  CwiTechnicalChallengeApplicationTests:55 - Starting CwiTechnicalChallengeApplicationTests on LUCAS-PC with PID 13392 (started by Lucas in E:\github\technical-challenge)
+22-05-2020 01:56:20 INFO  CwiTechnicalChallengeApplicationTests:651 - No active profile set, falling back to default profiles: default
+22-05-2020 01:56:21 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2020 01:56:21 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 73ms. Found 4 JPA repository interfaces.
+22-05-2020 01:56:22 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2020 01:56:22 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.15.Final
+22-05-2020 01:56:22 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22-05-2020 01:56:23 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+22-05-2020 01:56:25 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+22-05-2020 01:56:25 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+22-05-2020 01:56:29 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-05-2020 01:56:29 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:56:30 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-05-2020 01:56:30 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+22-05-2020 01:56:31 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:56:31 INFO  StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+22-05-2020 01:56:31 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22-05-2020 01:56:31 INFO  QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+22-05-2020 01:56:31 INFO  RAMJobStore:155 - RAMJobStore initialized.
+22-05-2020 01:56:31 INFO  QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22-05-2020 01:56:31 INFO  StdSchedulerFactory:1374 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22-05-2020 01:56:31 INFO  StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+22-05-2020 01:56:31 INFO  QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4c418496
+22-05-2020 01:56:31 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+22-05-2020 01:56:31 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+22-05-2020 01:56:31 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+22-05-2020 01:56:31 INFO  CachingConnectionFactory:524 - Attempting to connect to: [jaguar.rmq.cloudamqp.com:5672]
+22-05-2020 01:56:32 INFO  CachingConnectionFactory:497 - Created new connection: rabbitConnectionFactory#146f3d22:0/SimpleConnection@4e0802e0 [delegate=amqp://fssdhlxb@54.166.194.23:5672/fssdhlxb, localPort= 53931]
+22-05-2020 01:56:32 INFO  RabbitAdmin:591 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring-boot) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+22-05-2020 01:56:33 INFO  SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+22-05-2020 01:56:33 INFO  QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22-05-2020 01:56:33 INFO  CwiTechnicalChallengeApplicationTests:61 - Started CwiTechnicalChallengeApplicationTests in 12.92 seconds (JVM running for 13.845)
+22-05-2020 01:56:33 INFO  SimpleMessageListenerContainer:645 - Waiting for workers to finish.
+22-05-2020 01:56:34 INFO  SimpleMessageListenerContainer:648 - Successfully waited for workers to finish.
+22-05-2020 01:56:34 INFO  QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22-05-2020 01:56:34 INFO  SchedulerFactoryBean:845 - Shutting down Quartz Scheduler
+22-05-2020 01:56:34 INFO  QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+22-05-2020 01:56:34 INFO  QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22-05-2020 01:56:34 INFO  QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+22-05-2020 01:56:34 INFO  SimpleMessageListenerContainer:1231 - Shutdown ignored - container is not active already
+22-05-2020 01:56:34 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+22-05-2020 01:56:34 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2020 01:56:34 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+22-05-2020 01:56:35 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
